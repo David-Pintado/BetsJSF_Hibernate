@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>JavaServer Faces aplikazioa</title>
+		<h:outputStylesheet library="css" name="estiloa.css" />		
+	</h:head>
+	<h:body topmargin="40"><center>
+		<h:form id="form1">
+			<h3>Event date</h3>
+			<br></br>
+			<h:messages id="mezuak" style="color:blue" />
+			<tr>
+			
+				<td>Selected Date:   <h:outputText id="dataSelect" value="#{createEventBean.data}" 
+				style="color:black"/></td>
+				<td><p:calendar id="data" 
+						navigator="false" mode="inline">
+						<p:ajax event="dateSelect" listener="#{createEventBean.onDateSelect}"
+							update=":form1:dataSelect"></p:ajax>
+					</p:calendar></td>
+			</tr>
+			<h3>Create Event</h3>
+			<br></br>
+			<table>
+				<tr>
+					<td>Description: </td>
+					<td>
+					<h:inputText id="description" value="#{createEventBean.description}" >
+					</h:inputText>
+					</td>
+				</tr>
+			</table>
+			<p>
+				<h:commandButton value="Create Event" action="#{createEventBean.onEventSelect}" 
+				update=":form1:mezuak"
+				style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+			</p>
+			<br>
+			</br>
+			<p>	
+				<h:commandButton value="Close" action="#{createEventBean.close}"
+			update=":form1:dataSelect "
+							style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+			</p>
+		</h:form>
+	</center>
+	</h:body>
+</f:view>
+</html>

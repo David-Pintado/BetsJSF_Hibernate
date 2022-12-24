@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+<f:view>
+	<h:head>
+		<title>JavaServer Faces aplikazioa</title>
+		<h:outputStylesheet library="css" name="estiloa.css" />
+	</h:head>
+	<h:body topmargin="40">
+		<center>
+			<h:form id="form1">
+				<h3>Events</h3>
+				<tr>
+					<td><h3>Gertaera Guztiak:</h3></td>
+					<td><h:selectOneMenu value="#{allEvents.motaEvent}"
+					 converter="omnifaces.SelectItemsConverter">
+							<f:selectItems value="#{allEvents.motakEvent}" />
+						</h:selectOneMenu></td>
+				</tr>
+				<p>
+					<h:commandButton value="Close" action="#{allEvents.close}"
+						style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							" />
+				</p>
+			</h:form>
+		</center>
+	</h:body>
+</f:view>
+</ui:composition>
+</html>

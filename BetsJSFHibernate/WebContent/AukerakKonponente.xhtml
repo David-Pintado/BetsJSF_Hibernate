@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition>
+<f:view>
+	<h:head>
+		<title>Bets</title>
+		<h:outputStylesheet library="css" name="estiloa.css" />		
+	</h:head>
+	<h:body topmargin="40">
+		<center>
+			<h:form>
+				<tr>
+					<th colspan="2">
+					<h:outputText
+							value="Welcome #{loginBean.izena}." style="color:Blue; font-weight: bold;"
+							rendered="#{loginBean.render3}" /></th>
+				</tr>
+				<h3>Select an option</h3>
+				<p>
+					<h:commandButton value="Galderak ikusi" action="query"
+						rendered="#{ loginBean.disable1 }" style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+				</p>
+				<p>
+					<h:commandButton value="Galderak sortu" action="create"
+						rendered="#{ loginBean.disable2 }" 
+						style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+				</p>
+				<p>
+					<h:commandButton value="Gertaerak ezabatu" action="delete"
+						rendered="#{ loginBean.disable3 }" 
+						style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+				</p>
+				<p>
+					<h:commandButton value="Gertaerak sortu" action="createEvent"
+						rendered="#{ loginBean.disable5 }" 
+						style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+				</p>
+				<p>
+					<h:commandButton value="Show All Events" action="allEvents"
+						rendered="#{ loginBean.disable4 }" 
+						style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+				</p>
+				<br> </br>
+				<p>
+					<h:commandButton value="Log Out" action="returnLogin"
+					style="background-color: #5F9EA0; 
+							  border: none;
+							  color: white;
+							  padding: 5px 16px;
+							  text-align: center;
+							  text-decoration: none;
+							  display: inline-block;
+							  font-size: 16px;
+							  margin: 4px 2px;
+							  cursor: pointer;
+							  -webkit-transition-duration: 0.4s; /* Safari */
+							  transition-duration: 0.4s;
+ 							  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+							"/>
+				</p>
+			</h:form>
+		</center>
+	</h:body>
+</f:view>
+</ui:composition>
+</html>
